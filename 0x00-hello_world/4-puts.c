@@ -3,7 +3,10 @@
 /**
  * short description of the file
  *
+ * Description: superfluus
+ *
  * main - main function wow so hard to understand
+ *Description: superfluous
  *
  * Return: returns 0 always
  */
