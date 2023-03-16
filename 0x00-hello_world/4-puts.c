@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * function description
+ * short description
+ * Description: description
+ * Return: returns 0 always
  */
 
 int main(void)
