@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * short description
- * Description: description
+ * short description of the file
+ *
+ * main - main function wow so hard to understand
+ *
  * Return: returns 0 always
  */
 
