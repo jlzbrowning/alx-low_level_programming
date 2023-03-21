@@ -6,15 +6,18 @@
 #include "main.h"
 
 /**
- * printer - prints '_putchar'
+ * main - prints _putchar
  */
 
-int printer(void)
-
-char* str = "_putchar\n";
-int i;
-
-for (i = 0; str[i] != '\0'; i++) {
-    _putchar(str[i]);
+int main() {
+    putchar('_');
+    putchar('p');
+    putchar('u');
+    putchar('t');
+    putchar('c');
+    putchar('h');
+    putchar('a');
+    putchar('r');
+    putchar('\n');
     return (0);
 }
