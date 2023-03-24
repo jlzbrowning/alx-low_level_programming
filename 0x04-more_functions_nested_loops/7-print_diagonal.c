@@ -3,7 +3,7 @@
  * Auth: Brennan D Baraban
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_diagonal - Draws a diagonal line using the \ character.
