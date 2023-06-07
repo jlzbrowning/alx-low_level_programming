@@ -5,10 +5,11 @@
  */
 int _strlen_recursion(char *s)
 {
-	int tmp = 0
+	int tmp = 0;
 	if (*s)
 	{
 		++tmp;
 		_strlen_recursion(s + 1);
 	}
+	return tmp
 }
