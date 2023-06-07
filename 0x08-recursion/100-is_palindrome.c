@@ -13,12 +13,12 @@ int is_palindrome(char *s)
 
     while (s[length] != '\0')
     {
-        length++; // Calculate the length of the string
+        length++;
     }
 
     if (length <= 1)
     {
-        return 1; // Empty string or single character, palindrome
+        return (1);
     }
     else
     {
@@ -38,14 +38,14 @@ int is_palindrome_helper(char *s, int start, int end)
 {
     if (start >= end)
     {
-        return 1; // Base case: reached the middle, palindrome
+        return (1);
     }
 
     if (s[start] != s[end])
     {
-        return 0; // Characters don't match, not a palindrome
+        return 0;
     }
 
-    return is_palindrome_helper(s, start + 1, end - 1); // Check next pair of characters
+    return is_palindrome_helper(s, start + 1, end - 1);
 }
 
