@@ -16,7 +16,7 @@ char **strtow(char *str)
     int len = strlen(str);
     int in_word = 0;
 
-    // Count the number of words in the string
+    /* Count the number of words in the string */
     for (i = 0; i < len; i++)
     {
         if (is_separator(str[i]))
@@ -30,7 +30,7 @@ char **strtow(char *str)
         }
     }
 
-    // Allocate memory for the array of words
+    /* Allocate memory for the array of words */
     char **words = (char **)malloc(sizeof(char *) * (word_count + 1));
     if (words == NULL)
         return NULL;
@@ -39,7 +39,7 @@ char **strtow(char *str)
     j = 0;
     in_word = 0;
 
-    // Split the string into words
+    /* Split the string into words */
     for (i = 0; i < len; i++)
     {
         if (is_separator(str[i]))
@@ -58,15 +58,15 @@ char **strtow(char *str)
                 int word_len = 1;
                 int k;
 
-                // Calculate the length of the current word
+                /* Calculate the length of the current word */
                 for (k = i + 1; k < len && !is_separator(str[k]); k++)
                     word_len++;
 
-                // Allocate memory for the word
+                /* Allocate memory for the word */
                 words[j] = (char *)malloc(sizeof(char) * (word_len + 1));
                 if (words[j] == NULL)
                 {
-                    // Free previously allocated memory on failure
+                    /* Free previously allocated memory on failure */
                     for (k = 0; k < j; k++)
                         free(words[k]);
                     free(words);
