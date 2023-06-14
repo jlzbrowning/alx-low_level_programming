@@ -9,12 +9,15 @@ int is_separator(char c)
 
 char **strtow(char *str)
 {
+    int i, j;
+    int word_count = 0;
+    int len;
+    int in_word = 0;
+
     if (str == NULL || *str == '\0')
         return NULL;
 
-    int i, j, word_count = 0;
-    int len = strlen(str);
-    int in_word = 0;
+    len = strlen(str);
 
     /* Count the number of words in the string */
     for (i = 0; i < len; i++)
