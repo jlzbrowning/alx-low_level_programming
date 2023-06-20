@@ -1,48 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#ifndef DOG_H
+#define DOG_H
 /**
- * struct dog - structure defining a dog
+ * struct dog - dog data
  * @name: name of the dog
  * @age: age of the dog
- * @owner: owner of the dog
+ * @owner: name of the owner of the dog
+ *
+ * Description: Defines metadata about the dog and type of dog's struct
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-
-/**
- * main - entry point of the program
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	struct dog my_dog;
-
-	my_dog.name = malloc(sizeof(char) * 20); /* Allocating memory for name */
-	my_dog.owner = malloc(sizeof(char) * 20); /* Allocating memory for owner */
-
-	if (my_dog.name == NULL || my_dog.owner == NULL)
-	{
-		printf("Memory allocation failed.\n");
-		exit(1);
-	}
-
-	/* Assigning values to the struct members */
-	my_dog.name = "Buddy";
-	my_dog.age = 2.5;
-	my_dog.owner = "John Doe";
-
-	printf("Name: %s\n", my_dog.name);
-	printf("Age: %.1f\n", my_dog.age);
-	printf("Owner: %s\n", my_dog.owner);
-
-	free(my_dog.name); /* Freeing allocated memory for name */
-	free(my_dog.owner); /* Freeing allocated memory for owner */
-
-	return (0);
-}
+} dog_t;
+/* Additional function prototypes */
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+#endif
